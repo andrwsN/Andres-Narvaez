@@ -18,8 +18,27 @@ function App() {
     <h2>Bievenido al programa de {programa}</h2>
     <Presentacion />
     <section className="tarjetas">
-    <Tarjeta />
-    <Tarjeta />
+    <Tarjeta 
+    icono="⚛️" 
+    titulo="React" 
+    descripcion="Herramientas de JavaScript para construir interfaces con componentes"
+    horas={120}
+    destacada={true}
+    />
+    <Tarjeta 
+    icono="⚡" 
+    titulo="Vite" 
+    descripcion="Herramienta que crea, ejecuta y empaqueta el proyecto"
+    horas={60}
+    destacada={false}
+    />
+    <Tarjeta 
+    icono="🔍" 
+    titulo="Eslint" 
+    descripcion="Revisa la calidad del codigo y encuentra errores de sintaxis y estilo"
+    horas={20}
+    destacada={true}
+    />
     </section>
     </main>
     <PiePagina />

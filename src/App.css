@@ -210,6 +210,84 @@
   width: 48px;
 }
 
+/* Estilo base para todas las tarjetas */
+.tarjeta {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid #eaeaea;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto al pasar el mouse */
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Icono de la tarjeta */
+.tarjeta-icono {
+  font-size: 2.5rem;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+/* Título */
+.tarjeta h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* Descripción */
+.tarjeta p {
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Texto de horas */
+.tarjeta-horas {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4f46e5; /* Color índole moderno */
+  margin-top: auto; /* Empuja las horas hacia el fondo si la tarjeta crece */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* --- ESTILO PARA TARJETA DESTACADA --- */
+.tarjeta-tarjeta-destacada, 
+.tarjeta.tarjeta-destacada {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  border: none;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+}
+
+/* Modificamos los colores internos cuando está destacada para que contrasten bien */
+.tarjeta.tarjeta-destacada h3,
+.tarjeta.tarjeta-destacada p,
+.tarjeta.tarjeta-destacada .tarjeta-horas {
+  color: #ffffff;
+}
+
+.tarjeta.tarjeta-destacada p {
+  opacity: 0.9;
+}
+
+.tarjeta.tarjeta-destacada:hover {
+  box-shadow: 0 12px 28px rgba(79, 70, 229, 0.4);
+}
+
 .presentacion {
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   border-radius: 12px;
