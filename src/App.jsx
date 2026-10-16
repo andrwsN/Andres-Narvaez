@@ -1,4 +1,5 @@
 import './App.css'
+import fotoPerfil from './Imagenes/nachelle-nocom-LWVIR87DHPY-unsplash.jpg'
 import Encabezado from './componentes/Encabezado'
 import Sidebar from './componentes/Sidebar'
 import Tarjeta from './componentes/Tarjeta'
@@ -9,11 +10,16 @@ import Presentacion from './componentes/Presentacion'
 function App() {
 
   const programa = "Analisis y Desarrollo de Software"
+  const usuario = {
+  nombre: 'Daniel Andres Narvaez Narvaez',
+  rol: 'Aprendiz ADSO',
+  foto: fotoPerfil,
+}
   return (
   <>
   <div className="layout">
-    <Encabezado />
-    <Sidebar/>
+    <Encabezado usuario={usuario} />
+    <Sidebar usuario={usuario} />
     <main className="contenido">
     <h2>Bievenido al programa de {programa}</h2>
     <Presentacion />

@@ -1,4 +1,3 @@
-import reactLogo from '../assets/react.svg'
 
 function Tarjeta({icono, titulo, descripcion, horas, destacada}) {
     return(
